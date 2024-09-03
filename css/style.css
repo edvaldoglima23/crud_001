@@ -1,0 +1,581 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+h3 {
+    color: #555;
+}
+
+form {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    margin: 5px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+li a {
+    text-decoration: none;
+    color: #4CAF50;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+li a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+/* Container para os botões */
+.button-container {
+    margin-top: 10px;
+    display: flex; /* Usa Flexbox para alinhar os botões lado a lado */
+    gap: 10px; /* Espaço entre os botões */
+}
+
+/* Estilize o botão para combinar com o design da sua página */
+.button-cadastro {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #28a745; /* Verde para um estilo moderno e positivo */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Remove o sublinhado do link */
+    display: inline-block; /* Faz o link se comportar como um botão */
+    text-align: center;
+}
+
+.button-cadastro:hover {
+    background-color: #218838; /* Cor um pouco mais escura para o efeito hover */
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff; /* Azul para o botão de pesquisa */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Cor um pouco mais escura para o efeito hover */
+}
+
+/* Estilo geral para a tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Estilo para cabeçalhos e células da tabela */
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilo para cabeçalhos da tabela */
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Estilo para linhas pares da tabela */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Estilo para linhas ao passar o mouse */
+tr:hover {
+    background-color: #ddd;
+}
+
+/* Estilo para os links de ação */
+td a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    display: block; /* Faz com que o link se comporte como um bloco */
+    text-align: center; /* Centraliza o texto dentro do link */
+}
+
+/* Estilo para os links ao passar o mouse */
+td a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para a coluna de ações */
+.actions {
+    text-align: left; /* Alinha os botões à esquerda */
+}
+
+/* Grupo de botões dentro da coluna de ações */
+.button-group {
+    display: flex; /* Usa Flexbox para alinhar os botões */
+    flex-direction: column; /* Empilha os botões verticalmente */
+    gap: 10px; /* Espaço entre os botões */
+    align-items: flex-start; /* Alinha os botões ao início da célula */
+}
+
+/* Estilo geral dos botões */
+.btn {
+    display: block;
+    width: 80%; /* Faz com que os botões tenham a largura total disponível */
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center; /* Centraliza o texto dentro do botão */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Botão de editar */
+.btn-edit {
+    background-color: #007bff; /* Azul para o botão de editar */
+}
+
+.btn-edit:hover {
+    background-color: #0056b3; /* Azul mais escuro para o efeito hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para o efeito hover */
+}
+
+/* Botão de excluir */
+.btn-delete {
+    background-color: #dc3545; /* Vermelho para o botão de excluir */
+}
+
+.btn-delete:hover {
+    background-color: #c82333; /* Vermelho mais escuro para o efeito hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para o efeito hover */
+}
+
+
+/* Estilo geral para o corpo da página de cadastro */
+#pagina-cadastro {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Estilo para o título da página de cadastro */
+#pagina-cadastro h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo para o formulário na página de cadastro */
+#pagina-cadastro form {
+    margin: 0 auto; /* Centraliza o formulário */
+    max-width: 1600px; /* Define uma largura máxima para o formulário */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para os campos de entrada de texto na página de cadastro */
+#pagina-cadastro input[type="text"],
+#pagina-cadastro input[type="date"],
+#pagina-cadastro select,
+#pagina-cadastro input[type="file"] {
+    width: 100%; /* Faz os campos ocuparem a largura total do formulário */
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Estilo para o botão de submit na página de cadastro */
+#pagina-cadastro input[type="submit"] {
+    background-color: #4CAF50; /* Verde para um estilo moderno e positivo */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    text-align: center;
+    display: block; /* Faz com que o botão seja exibido como um bloco */
+    margin: 20px auto; /* Centraliza o botão e adiciona margem superior e inferior */
+}
+
+#pagina-cadastro input[type="submit"]:hover {
+    background-color: #45a049; /* Cor um pouco mais escura para o efeito hover */
+}
+
+/* Estilo para cabeçalhos de seções dentro do formulário */
+#pagina-cadastro h3 {
+    color: #555;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Estilo para campos do formulário que precisam de margem */
+#pagina-cadastro form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Estilo para os botões de ação na página de cadastro */
+#pagina-cadastro .button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#pagina-cadastro .button-cadastro {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff; /* Azul para um estilo moderno e positivo */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Remove o sublinhado do link */
+    display: inline-block; /* Faz o link se comportar como um botão */
+    text-align: center;
+}
+
+#pagina-cadastro .button-cadastro:hover {
+    background-color: #0056b3; /* Cor um pouco mais escura para o efeito hover */
+}
+
+/* Estilo para as tabelas, se aplicável na página de cadastro */
+#pagina-cadastro table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#pagina-cadastro th, #pagina-cadastro td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#pagina-cadastro th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#pagina-cadastro tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#pagina-cadastro tr:hover {
+    background-color: #ddd;
+}
+
+/* Estilo para os links de ação */
+#pagina-cadastro td a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    display: block; /* Faz com que o link se comporte como um bloco */
+    text-align: center; /* Centraliza o texto dentro do link */
+}
+
+#pagina-cadastro td a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para a mensagem de sucesso */
+.message-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centraliza o texto */
+}
+
+.message-container h2 {
+    color: #4CAF50; /* Verde para um estilo positivo */
+    margin-bottom: 10px;
+}
+
+.message-container p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+
+/* Botão Home */
+.button-home {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff; /* Azul para o botão Home */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Remove o sublinhado do link */
+    display: inline-block; /* Faz o link se comportar como um botão */
+    text-align: center;
+    margin-top: 0px; /* Espaço superior */
+}
+
+.button-home:hover {
+    background-color: #0056b3; /* Azul mais escuro para o efeito hover */
+}
+
+/* Mensagem de sucesso */
+.message-container {
+    max-width: 600px;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centraliza o texto */
+    position: fixed; /* Posiciona a mensagem em relação à janela de visualização */
+    top: 50%; /* Posiciona o container no meio da página verticalmente */
+    left: 50%; /* Posiciona o container no meio da página horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta o posicionamento para centralizar o container */
+    z-index: 1000; /* Garante que a mensagem fique acima de outros elementos */
+}
+
+.message-container h2 {
+    color: #4CAF50; /* Verde para um estilo positivo */
+    margin-bottom: 10px;
+}
+
+.message-container p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.message-container a.button-home {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff; /* Azul para o botão Home */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none; /* Remove o sublinhado do link */
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Estilo geral para a mensagem de sucesso */
+.message-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Estilo para o botão Home */
+.message-container a.button-home {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.message-container a.button-home:hover {
+    background-color: #0056b3;
+}
+
+.back-arrow {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 0px;
+    padding: 10px 15px;
+    background-color: #007BFF; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-arrow::before {
+    
+    margin-right: 8px;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.back-arrow:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+    transform: translateX(-5px); /* Leve movimento ao passar o mouse */
+}
+
+.back-arrow:hover::before {
+    transform: translateX(-3px); /* Movimento da seta ao passar o mouse */
+}
+
+/* Estiliza o botão "Pesquisar" */
+input[type="submit"] {
+    background-color: #007bff; /* Cor de fundo azul para o botão Pesquisar */
+    color: white; /* Cor do texto branco */
+    border: 1px solid #007bff; /* Borda azul */
+}
+
+/* Estiliza o botão "Limpar" */
+input[type="button"] {
+    background-color: #5b646d; /* Cor de fundo #5b646d para o botão Limpar */
+    color: white; /* Cor do texto branco */
+    border: 1px solid #5b646d; /* Borda da mesma cor do fundo */
+}
+
+/* Estilos gerais para os botões */
+input[type="submit"], input[type="button"] {
+    border-radius: 4px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+    text-align: center; /* Centraliza o texto no botão */
+    display: inline-block; /* Faz com que o botão se comporte como um bloco em linha */
+    transition: background-color 0.3s, border-color 0.3s; /* Transição suave para a cor de fundo e borda */
+    margin-right: 10px; /* Espaçamento entre os botões */
+}
+
+/* Estilos para o botão ao passar o mouse */
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Cor de fundo azul mais escuro ao passar o mouse */
+    border-color: #0056b3; /* Borda azul mais escura ao passar o mouse */
+}
+
+input[type="button"]:hover {
+    background-color: #4a555d; /* Cor de fundo mais escura ao passar o mouse */
+    border-color: #4a555d; /* Borda mais escura ao passar o mouse */
+}
+
+/* Remove o contorno padrão ao focar no botão */
+input[type="submit"]:focus, input[type="button"]:focus {
+    outline: none;
+}
+
+/* Estilo para o botão "Voltar" */
+.botao-cadastro-voltar {
+    position: relative; /* Define a posição relativa para controle do layout */
+    bottom: 20px; /* Distância do fundo da página */
+    left: 10px 10px; /* Distância da lateral esquerda da página */
+    background-color: #2196F3; /* Azul para o botão Voltar */
+    color: #fff; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno (vertical e horizontal) */
+    border: none; /* Remove a borda padrão */
+    border-radius: 3px; /* Bordas levemente arredondadas */
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+    display: inline-block; /* Exibe o botão em linha */
+    text-align: center; /* Alinha o texto no centro */
+    width: 90px; /* Largura fixa (ajuste conforme necessário) */
+    height: 35px; /* Altura fixa (ajuste conforme necessário) */
+    box-sizing: border-box; /* Inclui padding e borda nas dimensões do botão */
+    transition: background-color 0.3s; /* Efeito de transição suave ao passar o mouse */
+    bottom: -27px !important ;
+}
+
+.botao-editar-voltar {
+    position: relative; /* Define a posição relativa para controle do layout */
+    bottom: 20px; /* Distância do fundo da página */
+    left: 10px 10px; /* Distância da lateral esquerda da página */
+    background-color: #2196F3; /* Azul para o botão Voltar */
+    color: #fff; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno (vertical e horizontal) */
+    border: none; /* Remove a borda padrão */
+    border-radius: 3px; /* Bordas levemente arredondadas */
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+    display: inline-block; /* Exibe o botão em linha */
+    text-align: center; /* Alinha o texto no centro */
+    width: 90px; /* Largura fixa (ajuste conforme necessário) */
+    height: 35px; /* Altura fixa (ajuste conforme necessário) */
+    box-sizing: border-box; /* Inclui padding e borda nas dimensões do botão */
+    transition: background-color 0.3s; /* Efeito de transição suave ao passar o mouse */
+    bottom: -1px !important;
+}
+
+.botao-cadastro-voltar:hover {
+    background-color: #1976D2; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilo para o botão "Confirmar" */
+.botao-cadastro-confirmar {
+    background-color: #4CAF50; /* Verde para o botão Confirmar */
+    color: #fff;
+    padding: 10px 20px; /* Espaçamento interno */
+    border: none;
+    border-radius: 0;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+
