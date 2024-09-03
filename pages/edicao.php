@@ -100,7 +100,7 @@
         // Consultar dados da pessoa
         $sql_pessoa = "SELECT * FROM pessoa WHERE id = $id_pessoa";
         $result_pessoa = $conn->query($sql_pessoa);
-        
+        $pessoa = $result_pessoa->fetch_assoc();
     }
     ?>
 
